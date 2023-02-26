@@ -238,3 +238,7 @@ cython_debug/
 notebooks/
 .DS_Store
 .idea/
+config_0*.yml
+config_1*.yml
+.env_0*
+.env_1*
