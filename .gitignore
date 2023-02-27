@@ -236,6 +236,7 @@ cython_debug/
 
 # Manual section
 notebooks/
+databases/
 .DS_Store
 .idea/
 config.yml
