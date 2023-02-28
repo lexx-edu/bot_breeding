@@ -1,5 +1,6 @@
 from bot.config import get_parts
 from bot.handlers import dp
+from bot.states import dp
 from bot.backend.controller import CONNECTION_STATUS
 from aiogram import executor
 from time import sleep

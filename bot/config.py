@@ -1,6 +1,7 @@
 import yaml
 from dotenv import dotenv_values
 from aiogram import Bot, Dispatcher
+from aiogram.contrib.fsm_storage.memory import MemoryStorage
 
 
 def set_config(config_path: str):
@@ -19,8 +20,9 @@ def get_parts(part_path: list):
 
 
 PATH_TO_CONFIG = dotenv_values('.env_02').get('config_file', 'config.yml')
+STORAGE = MemoryStorage()
 
 config = set_config(PATH_TO_CONFIG)
 bot = Bot(get_parts(['init', 'token']))
-dp = Dispatcher(bot)
+dp = Dispatcher(bot, storage=STORAGE)
 db_str = get_parts(['init', 'db_str'])

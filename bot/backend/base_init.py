@@ -20,6 +20,7 @@ check_base_req = [
         CREATE TABLE IF NOT EXISTS bot_tasks (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             customer INTEGER,
+            create_date TEXT, 
             subject TEXT,
             description TEXT,
             deadline TEXT, 
